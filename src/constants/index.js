@@ -1,0 +1,106 @@
+import { errorCodes } from './errorCodes'
+
+const emailTypes = {
+  STUDENT_TRIAL_REGISTER_VERIFY_FIRST: 'STUDENT_TRIAL_REGISTER_VERIFY_FIRST',
+  STUDENT_TRIAL_REGISTER_VERIFY_60: 'STUDENT_TRIAL_REGISTER_VERIFY_60',
+  STUDENT_TRIAL_REGISTER_VERIFY_360: 'STUDENT_TRIAL_REGISTER_VERIFY_360',
+  STUDENT_TRIAL_REGISTER_VERIFY_720: 'STUDENT_TRIAL_REGISTER_VERIFY_720',
+  TUTOR_REGISTER_EMAIL: 'TUTOR_REGISTER_EMAIL',
+  TRIAL_CONFIRMATATION_EMAIL: 'TRIAL_CONFIRMATATION_EMAIL',
+  TRIAL_REMINDER: 'TRIAL_REMINDER'
+}
+
+const emailTemplates = {
+  STUDENT_TRIAL_COMPLETED_TEMPLATE: 'd-aeec1b697806404f85287aa93e44e2d8',
+  STUDENT_TRIAL_REGISTER_VERIFY_FIRST_TEMPLATE:
+    'd-eb1ace62ec814114a867c10f4090ce8b',
+  STUDENT_TRIAL_REGISTER_VERIFY_60_TEMPLATE:
+    'd-eb1ace62ec814114a867c10f4090ce8b',
+  STUDENT_TRIAL_REGISTER_VERIFY_360_TEMPLATE:
+    'd-eb1ace62ec814114a867c10f4090ce8b',
+  STUDENT_TRIAL_REGISTER_VERIFY_720_TEMPLATE:
+    'd-eb1ace62ec814114a867c10f4090ce8b',
+  TUTOR_REGISTER_EMAIL_TEMPLATE: 'd-eb1ace62ec814114a867c10f4090ce8b',
+  TRIAL_CONFIRMATATION_EMAIL_TEMPLATE: 'd-e358fdd62fc84bcda650cd6f313db7e8',
+  TRIAL_REMINDER_TEMPLATE: 'd-3c4a33679ff24015b7b90d89dfccc433',
+  TRIAL_SAMEDAY_REMINDER_TEMPLATE: 'd-aa139ae3f26c410cba1341c97e07d8a9',
+  TRIAL_STARTING_TEMPLATE: 'd-9020439fa6bf4898b8d4fc787c8429a6',
+  TRIAL_SAMEHOUR_REMINDER_TEMPLATE: 'd-92be9cbbff5646439c3b4b4110c82947'
+}
+
+const environments = {
+  DEVELOPMENT: 'development',
+  TEST: 'test',
+  PRODUCTION: 'production'
+}
+
+const studentCourseStatus = {
+  STUDENT_TRIAL_TO_BE_SCHEDULED_STATUS: 'TRIAL_TO_BE_SCHEDULED',
+  STUDENT_SCHEDULED_TRIAL_STATUS: 'SCHEDULED_TRIAL',
+  STUDENT_TRIAL_COMPLETED_STATUS: 'TRIAL_COMPLETED',
+  STUDENT_PAID_STATUS: 'PAID'
+}
+
+const tutorCourseStatus = {
+  SLOTS_TO_BE_OPENED_STATUS: 'SLOTS_TO_BE_OPENED',
+  SLOTS_OPENED_STATUS: 'SLOTS_OPENED'
+}
+
+const slotStatus = {
+  SLOT_OPEN: 'open',
+  SLOT_CLOSED: 'closed',
+  SLOT_BOOKED: 'booked',
+  SLOT_RESERVED: 'reserved',
+  SLOT_DEALLOCATED: 'deallocated'
+}
+
+const slotType = {
+  SLOT_TYPE_BOTH: 'both',
+  TRIAL: 'trial',
+  PAID: 'paid'
+}
+const slotConfigTypes = {
+  DAY_WISE: 'day_wise',
+  DATE_WISE: 'date_wise'
+}
+
+const sessionStatus = {
+  SESSION_OPEN: 'open',
+  SESSION_BOOKED: 'booked',
+  SESSION_RESERVED: 'reserved',
+  SESSION_TECH_NOSHOW: 'tech_noshow',
+  SESSION_NOSHOW: 'noshow',
+  SESSION_END: 'end'
+}
+
+const bookingStatus = {
+  BOOOKING_BOOKED: 'booked',
+  BOOKING_TECH_NOSHOW: 'tech_noshow',
+  BOOKING_NOSHOW: 'noshow',
+  BOOKING_STARTED: 'started',
+  BOOKING_RESCHEDULED: 'rescheduled',
+  BOOKING_CANCELLED: 'cancelled',
+  BOOKING_END: 'end'
+}
+const events = {
+  TRIAL_BOOKED_EVENT: 'TRIAL_BOOKED',
+  CLASS_ENDED_EVENT: 'CLASS_ENDED'
+}
+
+module.exports = {
+  ADMIN_ROLE: 'admin',
+  STUDENT_ROLE: 'student',
+  TUTOR_ROLE: 'tutor',
+  ...emailTemplates,
+  ...emailTypes,
+  ...errorCodes,
+  ...environments,
+  ...studentCourseStatus,
+  ...tutorCourseStatus,
+  ...slotStatus,
+  ...slotType,
+  ...slotConfigTypes,
+  ...sessionStatus,
+  ...bookingStatus,
+  ...events
+}
