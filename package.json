@@ -119,7 +119,7 @@
     "passport-microsoft": "0.0.5",
     "passport-twitter-oauth2": "^2.1.1",
     "pre-commit": "1.2.2",
-    "semantic-release": "15.13.3",
+    "semantic-release": "17.2.3",
     "serverless": "^1.39.1",
     "serverless-pseudo-parameters": "^2.4.0",
     "serverless-step-functions": "^1.15.0",
